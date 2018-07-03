@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import './stylesheets/Header.css';
+import '../stylesheets/Resume.css';
 
 
-class Header extends Component {
+class Resume extends Component {
   render() {
     return (
       <div className="header">
-        Anna Oh
+        Resume
       </div>
     );
   }
 }
 
-export default Header;
+export default Resume;
