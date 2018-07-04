@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
 import './stylesheets/App.css';
 import './stylesheets/Reset.css';
+
 import Header from './components/Header.jsx';
 import Intro from './components/Intro.jsx';
 import Works from './components/Works.jsx';

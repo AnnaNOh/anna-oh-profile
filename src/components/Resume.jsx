@@ -5,7 +5,7 @@ import '../stylesheets/Resume.css';
 class Resume extends Component {
   render() {
     return (
-      <div className="header">
+      <div className="resume">
         Resume
       </div>
     );

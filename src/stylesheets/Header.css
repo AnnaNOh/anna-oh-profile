@@ -1,13 +1,17 @@
 
+.header {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+}
+
 .header-menu {
   display: none;
 }
 
 .header-name {
-  position: absolute;
   width: 50px;
-  top: 10%;
-  left: 10%;
   background: black;
   color: white;
   font-size: 20px;
@@ -15,6 +19,22 @@
   border-radius: 100px;
 }
 
-.header-name:hover{
-  color: pink;
+.header-name:hover + .header-menu{
+  display: block;
 }
+
+
+
+/*
+referred by app academy:
+sarah.ahmed@uber.com (apply directly with the link and email her)
+*/
+proper string (valid parenthesis)
+spiderman bullshit
+degree of an array
+group anagrams =>
+
+/* other resources for job search
+gloat.com
+delve for mobile app
+shaper for mobile app -> networking  */
