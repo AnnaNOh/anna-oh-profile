@@ -3,13 +3,92 @@ import '../stylesheets/Works.css';
 
 
 class Works extends Component {
+  constructor(props){
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
 
   componentDidMount() {
+  }
+
+  handleClick() {
     let card1 = document.getElementsByClassName("card-1")[0];
     let card2 = document.getElementsByClassName("card-2")[0];
     let card3 = document.getElementsByClassName("card-3")[0];
+    let cardButtons = document.getElementsByClassName("card-button");
+    let chosenButton = document.getElementsByClassName("chosen-button")[0];
+    card1.classList.add("card-3");
+    card1.classList.remove("card-1");
+    card2.classList.add("card-1");
+    card2.classList.remove("card-2");
+    card3.classList.add("card-2");
+    card3.classList.remove("card-3");
+    let chosenButtonI = 0;
+    for (let i = 0; i < cardButtons.length; i++){
+      if (chosenButton === cardButtons[i]){
+        chosenButton.classList.remove("chosen-button");
+        chosenButtonI = (i + 1) % 3;
+      }
+    }
+    cardButtons[chosenButtonI].classList.add("chosen-button");
   }
 
+  handleButtonClick(e) {
+    let eventItemId = Number(e.target.id);
+    let wayside = document.getElementsByClassName("wayside")[0];
+    let gowea = document.getElementsByClassName("gowea")[0];
+    let pixelg = document.getElementsByClassName("pixelg")[0];
+    let cardButtons = document.getElementsByClassName("card-button");
+    let chosenButton = document.getElementsByClassName("chosen-button")[0];
+
+    if (eventItemId === 1) {
+      if (chosenButton !== cardButtons[0]) {
+        wayside.classList.add("card-1");
+        wayside.classList.remove("card-2");
+        wayside.classList.remove("card-3");
+        gowea.classList.add("card-2");
+        gowea.classList.remove("card-1");
+        gowea.classList.remove("card-3");
+        pixelg.classList.add("card-3");
+        pixelg.classList.remove("card-1");
+        pixelg.classList.remove("card-2");
+        cardButtons[0].classList.add("chosen-button")
+        cardButtons[1].classList.remove("chosen-button");
+        cardButtons[2].classList.remove("chosen-button");
+      };
+    } else if (eventItemId === 2){
+      if (chosenButton !== cardButtons[1]) {
+        wayside.classList.add("card-3");
+        wayside.classList.remove("card-1");
+        wayside.classList.remove("card-2");
+        gowea.classList.add("card-1");
+        gowea.classList.remove("card-2");
+        gowea.classList.remove("card-3");
+        pixelg.classList.add("card-2");
+        pixelg.classList.remove("card-1");
+        pixelg.classList.remove("card-3");
+        cardButtons[0].classList.remove("chosen-button");
+        cardButtons[1].classList.add("chosen-button");
+        cardButtons[2].classList.remove("chosen-button");
+      }
+    } else {
+      if (chosenButton !== cardButtons[2]) {
+        wayside.classList.add("card-2");
+        wayside.classList.remove("card-1");
+        wayside.classList.remove("card-3");
+        gowea.classList.add("card-3");
+        gowea.classList.remove("card-1");
+        gowea.classList.remove("card-2");
+        pixelg.classList.add("card-1");
+        pixelg.classList.remove("card-3");
+        pixelg.classList.remove("card-2");
+        cardButtons[0].classList.remove("chosen-button");
+        cardButtons[1].classList.remove("chosen-button");
+        cardButtons[2].classList.add("chosen-button");
+      }
+    }
+  }
 
 
   render() {
@@ -17,13 +96,13 @@ class Works extends Component {
       <div className="works">
         <div className="works-feature"> feature </div>
         <div className="works-cards">
-          <div className="cards wayside card-3"> WaySide </div>
-          <div className="cards gowea card-2"> GoWeather </div>
-          <div className="cards pixelg card-1"> Pixelgram </div>
+          <div className="cards wayside card-3" onClick={this.handleClick}> WaySide </div>
+          <div className="cards gowea card-2" onClick={this.handleClick}> GoWeather </div>
+          <div className="cards pixelg card-1" onClick={this.handleClick} > Pixelgram </div>
           <div className="cards-button">
-            <div className="card-button chosen-button"></div>
-            <div className="card-button"></div>
-            <div className="card-button"></div>
+            <div id="1" className="card-button chosen-button" onClick={this.handleButtonClick}></div>
+            <div id="2" className="card-button" onClick={this.handleButtonClick}></div>
+            <div id="3" className="card-button" onClick={this.handleButtonClick}></div>
           </div>
         </div>
         <div className="works-des"> descrip </div>
@@ -33,75 +112,3 @@ class Works extends Component {
 }
 
 export default Works;
-
-// t = 53;
-// p = 0;
-// pm = $('.cards_inner__card').length;
-//
-// $('.cards_inner__card').mousedown(function(){
-//   var ct = $(this).css('transform');
-//   var cts = ct.split(',')
-//   ctse = (cts[cts.length - 2] + 'px')
-// })
-//
-// function on(){
-// $('.cards_inner__card').draggable({
-//   start: function( event, ui ) {
-//     startPosition = ui.position.left;
-//   },
-//   drag:function(e, ui){
-//     if(ui.position.left > startPosition){
-//       ui.position.left = startPosition;
-//     }
-//     if(ui.position.left < -250){
-//       ui.position.left = -250;
-//     }
-//     x = ui.position.left;
-//     $(this).css('transform',' rotate(' + x/36 + 'deg)')
-//   },
-//   revert:function(valid) {
-//     if(x > 60 || x < - 60) {
-//       el = $(this)
-//       setTimeout(function(){
-//         el_class = el.attr('class').split(' ');
-//         el_class_end = el_class[1]
-//         el.addClass('invalid')
-//         if(p < 3){
-//           $('.points').find('.active').removeClass('active').next().addClass('active')
-//           p++
-//         } else {
-//           $('.points').find('.active').removeClass('active')
-//           $('.points').find('.first').addClass('active')
-//           p=0
-//         }
-//       },10)
-//       setTimeout(function(){
-//         $('.cards_inner__card').each(function(){
-//           $(this).addClass('animate');
-//           var ct = $(this).css('transform');
-//           var cts = ct.split(',')
-//           ctse = (parseInt(cts[cts.length - 2]) + 60 + 'px')
-//           $(this).css('transform','translateZ(' + ctse + ')');
-//         });
-//         $('.cards_inner .wrap').prepend('<div class="cards_inner__card ' + el_class_end + ' card_in"><div class="logo"></div></div>')
-//         el.remove();
-//         $('.cards_inner__card').removeClass('animate');
-//         on();
-//       },160);
-//       setTimeout(function(){
-//         $('.card_in').removeClass('card_in')
-//       },500);
-//     } else {
-//       $(this).css('transform','rotate(0deg)')
-//       return !valid;
-//     }
-//   },
-//   axis:'x',
-//   containment:'.cards_inner'
-// });
-// $('.cards_inner__card:nth-of-type(1)').draggable( 'disable' )
-// $('.cards_inner__card:nth-of-type(2)').draggable( 'disable' )
-// $('.cards_inner__card:nth-of-type(3)').draggable( 'disable' )
-// $('.cards_inner__card:nth-of-type(4)').draggable( 'enable' )
-// }
-// on();
