@@ -6,7 +6,9 @@ class Works extends Component {
   render() {
     return (
       <div className="works">
-        Works
+        <div className="works-feature"> feature </div>
+        <div className="works-card"> card </div>
+        <div className="works-des"> descrip </div>
       </div>
     );
   }

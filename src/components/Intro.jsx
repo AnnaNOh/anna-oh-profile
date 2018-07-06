@@ -13,7 +13,6 @@ class Intro extends Component {
           </div>
           <div className="intro-left-bot">
             <h1 className="intro-left-bot-text"> I'm passionate about solving problems through technical and human centric approaches </h1>
-            <div className="intro-left-bot-dec1"></div>
           </div>
         </div>
         <div className="intro-right">
@@ -22,7 +21,7 @@ class Intro extends Component {
             <h1 className="intro-word"> Developer </h1>
           </div>
           <div className="intro-right-bot">
-            <h1> I build interactive web apps using React/Redux, Node.JS/Express, Ruby on Rails, JavaScript, HTML5/CSS3 and more </h1>
+            <h1 className="intro-right-bot-text"> I build interactive web apps using React/Redux, Node.JS/Express, Ruby on Rails, JavaScript, HTML5/CSS3 and more </h1>
           </div>
         </div>
       </div>

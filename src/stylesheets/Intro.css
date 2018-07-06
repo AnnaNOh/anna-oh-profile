@@ -33,14 +33,12 @@
   z-index: 2;
   overflow: hidden;
 }
-
 .intro-left-top {
   left: 0%;
   background: rgb(253, 200, 100, 0.95);
   /* background: rgb(109, 135, 70, 0.95); */
   color: white;
 }
-
 .intro-right-top {
   left: 0%;
   background: rgb(20, 49, 71, 0.95);
@@ -50,7 +48,6 @@
 .intro-letter {
   font-size: 350px;
 }
-
 .intro-word {
   font-size: 50px;
   text-transform: uppercase;
@@ -71,23 +68,33 @@
   text-align: center;
   font-size: 5em;
 }
-
 .intro-left-bot {
   box-sizing: border-box;
   border-left: 0.5em solid #fbc464;
+  background: #f9edc3;
 }
-
 .intro-left-bot-text {
   background: #0f2b3e;
   color: white;
   padding: 1em;
   border-right: 0.5em solid #8192ad;
 }
+.intro-right-bot {
+  border-top: 0.5em solid #68843b;
+  background: #adc3d1;
+}
+.intro-right-bot-text {
+  background: #315c86;
+  background: #68843b;
+  background: #2e5a84;
+  color: white;
+  padding: 1em;
+  margin: 1em;
+}
 
 .intro-left:hover .intro-left-top{
   left: -100%;
 }
-
 .intro-left:hover .intro-left-top > .intro-word {
   left: -50%;
   letter-spacing: .8em;
@@ -96,7 +103,6 @@
 .intro-right:hover .intro-right-top {
   left: 100%;
 }
-
 .intro-right:hover .intro-right-top > .intro-word {
   left: 50%;
   letter-spacing: .8em;
