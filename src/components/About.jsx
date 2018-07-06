@@ -5,7 +5,7 @@ import '../stylesheets/About.css';
 class About extends Component {
   render() {
     return (
-      <div className="header">
+      <div className="about">
         About
       </div>
     );

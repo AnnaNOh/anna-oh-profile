@@ -5,7 +5,7 @@ import '../stylesheets/Connect.css';
 class Connect extends Component {
   render() {
     return (
-      <div className="header">
+      <div className="connect">
         Connect
       </div>
     );

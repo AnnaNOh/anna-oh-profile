@@ -1,40 +1,56 @@
 
 .header {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  z-index: 2;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  z-index: 5;
+  --circle-diameter: 150px;
 }
 
 .header-menu {
   display: none;
+  width: 250px;
+}
+
+.header-menu-li {
+  padding: 4px 0px;
+  font-family: var(--font-playfair);
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.header{
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  border-radius: var(--circle-diameter);
+  background: black;
+  transition: 0.4s;
+}
+
+.header-name, .header-name-2 {
+  text-align: center;
+  color: white;
+  font-family: var(--font-caveat);
+  font-size: 40px;
+  font-weight: 700;
+  transform: rotate(-5deg);
 }
 
 .header-name {
-  width: 50px;
-  background: black;
-  color: white;
-  font-size: 20px;
-  padding: 30px 28px;
-  border-radius: 100px;
+  padding-top: 30px;
 }
 
-.header-name:hover + .header-menu{
+.header-name-2{
+  padding-bottom: 30px;
+}
+
+.header:hover{
+  width: 250px;
+  height: 300px;
+  border-radius: 0;
+}
+
+.header:hover .header-menu{
   display: block;
 }
-
-
-
-/*
-referred by app academy:
-sarah.ahmed@uber.com (apply directly with the link and email her)
-*/
-proper string (valid parenthesis)
-spiderman bullshit
-degree of an array
-group anagrams =>
-
-/* other resources for job search
-gloat.com
-delve for mobile app
-shaper for mobile app -> networking  */
