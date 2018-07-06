@@ -7,6 +7,27 @@
   position: relative;
 }
 
+.works-feature {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.works-laptop {
+  padding-top: 50px;
+}
+
+.works-project {
+  position: absolute;
+  top: 117px;
+  left: calc(50% - 458px);
+  width: 916px;
+  height: 573px;
+}
+
 .works-cards {
   width: 220px;
   position: absolute;

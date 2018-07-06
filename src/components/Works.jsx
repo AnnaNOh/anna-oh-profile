@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import '../stylesheets/Works.css';
 
+import laptopPNG from "../assets/photos/laptop.png";
+import pg1 from "../assets/photos/Pixelgram1.png";
+import pg2 from "../assets/photos/Pixelgram2.png";
+import pg3 from "../assets/photos/Pixelgram3.png";
+import ws1 from "../assets/photos/Wayside1.png";
+import ws2 from "../assets/photos/Wayside2.png";
+import ws3 from "../assets/photos/Wayside3.png";
+import gw1 from "../assets/photos/GoWeather1.png";
+import gw2 from "../assets/photos/GoWeather2.png";
+import gw3 from "../assets/photos/GoWeather3.png";
+
+let PROJ_PHOTOS = {};
+PROJ_PHOTOS["pg"] = [pg1, pg2, pg3];
+PROJ_PHOTOS["ws"] = [ws1, ws2, ws3];
+PROJ_PHOTOS["gw"] = [gw1, gw2, gw3];
 
 class Works extends Component {
   constructor(props){
@@ -94,7 +109,10 @@ class Works extends Component {
   render() {
     return (
       <div className="works">
-        <div className="works-feature"> feature </div>
+        <div className="works-feature">
+          <img className="works-laptop" src={laptopPNG} alt="laptop" />
+          <img className="works-project" src={PROJ_PHOTOS["pg"][0]} alt="pic1" />
+        </div>
         <div className="works-cards">
           <div className="cards wayside card-3" onClick={this.handleClick}> WaySide </div>
           <div className="cards gowea card-2" onClick={this.handleClick}> GoWeather </div>
