@@ -5,6 +5,9 @@
   height: 100%;
   background: orange;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .works-feature {
@@ -14,20 +17,55 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 100px;
 }
 
 .works-laptop {
-  padding-top: 50px;
 }
 
 .works-project {
   position: absolute;
-  top: 117px;
-  left: calc(50% - 458px);
+  top: 67px;
+  left: calc(50% - 408px);
   width: 916px;
   height: 573px;
 }
 
+.works-des {
+  position: relative;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 2px 12px rgb(0, 0, 0, 0.22);
+}
+
+.works-des-title-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.works-des-link {
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: blue;
+  font-size: 20px;
+  font-family: var(--font-abril);
+  padding-bottom: 2px;
+}
+
+.works-des-title {
+font-size: 30px;
+font-family: var(--font-abril);
+margin-right: 20px;
+}
+
+
+/* cards */
 .works-cards {
   width: 220px;
   position: absolute;

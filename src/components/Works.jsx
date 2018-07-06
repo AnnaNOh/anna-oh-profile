@@ -112,7 +112,19 @@ class Works extends Component {
         <div className="works-feature">
           <img className="works-laptop" src={laptopPNG} alt="laptop" />
           <img className="works-project" src={PROJ_PHOTOS["pg"][0]} alt="pic1" />
+
+          <div className="works-des">
+            <div className="works-des-title-group">
+              <h1 className="works-des-title"> Pixelgram </h1>
+              <a className="works-des-link"> Live </a>
+              <a className="works-des-link"> Github </a>
+            </div>
+            <div className="works-des-body">
+              <p className="works-des-descrip"> pixelgram's description here </p>
+            </div>
+          </div>
         </div>
+        
         <div className="works-cards">
           <div className="cards wayside card-3" onClick={this.handleClick}> WaySide </div>
           <div className="cards gowea card-2" onClick={this.handleClick}> GoWeather </div>
@@ -123,7 +135,6 @@ class Works extends Component {
             <div id="3" className="card-button" onClick={this.handleButtonClick}></div>
           </div>
         </div>
-        <div className="works-des"> descrip </div>
       </div>
     );
   }
