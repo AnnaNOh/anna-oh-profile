@@ -1,8 +1,8 @@
-.about {
+.skills {
   width: 100%;
   height: 100%;
-  background: #aec1d0;
   background: #d8c035;
+  background: #aec1d0;
   display: flex;
   flex-direction: column;
   justify-content: center;
