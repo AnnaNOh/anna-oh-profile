@@ -3,15 +3,28 @@
   height: 100%;
   background: #d8c035;
   background: #aec1d0;
+  background: #2e5a84;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.skills > h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-family: var(--font-abril);
+  color: white;
+  margin-bottom: 30px;
+}
+
 .skill-list {
-  display: flex;
-  justify-content: wrap;
+  width: 80%;
+  max-width: 900px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
 }
 
 .skill-item {
@@ -22,5 +35,38 @@
 }
 
 .icon {
-  font-size: 4em;
+  font-size: 6em;
+  color: white;
+  margin-bottom: 10px;
+  transition: 1s;
+}
+
+.icon:hover {
+  font-size: 7em;
+  animation-duration: 1s;
+  animation-name: shake;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+  animation: shake 0.5s ease-in infinite running;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.skill-name {
+  font-size: 1em;
+  color: white;
+  font-family: var(--font-abril);
 }
