@@ -8,3 +8,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.skill-list {
+  display: flex;
+  justify-content: wrap;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 4em;
+}
