@@ -33,6 +33,16 @@
   padding: 30px 0px;
 }
 
+.header-plus {
+  font-size: 60px;
+  font-family: var(--font-caveat);
+  color: white;
+  height: 0;
+  position: relative;
+  top: -40px;
+  left: 150px;
+}
+
 .header-name-1, .header-name-2 {
   text-align: center;
   color: white;
